@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="icon" type="image/png" href="../ASSETS/images/briefcase.png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSS/loading.css" />
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link rel="stylesheet" href="../CSS/inicio.css" />
+    <link rel="stylesheet" href="../CSS/sobre-mi.css" />
+    <link rel="stylesheet" href="../CSS/tecnologias.css" />
+    <link rel="stylesheet" href="../CSS/proyectos.css" />
+    <link rel="stylesheet" href="../CSS/experiencia-formacion.css" />
+    <link rel="stylesheet" href="../CSS/contacto.css" />
+</head>
+
+<body>
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <div class="welcome-text">Bienvenido a mi Portafolio</div>
+        <div class="loader"></div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg custom-navbar" data-bs-theme="light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Portafolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">
+                            <i class="fa-solid fa-house me-1"></i>
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#sobre-mi">
+                            <i class="fa-solid fa-user-astronaut me-1"></i>
+                            Sobre mí
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#tecnologias">
+                            <i class="fa-solid fa-laptop-code me-1"></i>
+                            Tecnologías
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#proyectos">
+                            <i class="fa-solid fa-folder-open me-1"></i>
+                            Proyectos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#experiencia">
+                            <i class="fa-solid fa-briefcase me-1"></i>
+                            Experiencia
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#formacion">
+                            <i class="fa-solid fa-graduation-cap me-1"></i>
+                            Formación
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#contacto">
+                            <i class="fa-solid fa-envelope me-1"></i>
+                            Contáctame
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="Inicio" id="inicio">
+        <div class="container">
+            <!-- Partículas decorativas -->
+            <div class="particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="top: 60%; left: 15%; animation-delay: 2s;"></div>
+            <div class="particle" style="top: 40%; right: 20%; animation-delay: 4s;"></div>
+            <div class="particle" style="top: 80%; right: 30%; animation-delay: 6s;"></div>
+
+            <!-- Contenido de texto (izquierda) -->
+            <div class="hero-content">
+                <h1>Hola, soy Darley</h1>
+                <h2 class="subtitle">Desarrollador Full Stack</h2>
+
+                <p>
+                    Desarrollador Full Stack con experiencia en la creación de aplicaciones web completas,
+                    desarrollo de APIs REST y documentación técnica. Me enfoco en aprender constantemente
+                    y en construir soluciones reales y eficientes mediante el software.
+                </p>
+
+                <div class="button-group">
+                    <button type="button" class="btn-primary">
+                        <a href="https://wa.me/573104300685" target="_blank"
+                            style="color: white; text-decoration: none;">
+                            <i class="fa-solid fa-paper-plane me-2"></i>
+                            Contáctame
+                        </a>
+
+                    </button>
+                    <button type="button" class="btn-secondary">
+                        <i class="fa-solid fa-download me-2"></i>
+                        Descargar CV
+                    </button>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/sebascorream" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/darley-sebasti%C3%A1n-correa-morales/" target="_blank"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_d__sebas_/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Átomo animado (derecha) -->
+            <div class="atom-container">
+                <!-- Núcleo - Foto de perfil -->
+                <div class="nucleus">
+                    <img src="../ASSETS/images/developer.jpg" alt="Foto de perfil de Darley, desarrollador Full Stack">
+                </div>
+
+                <!-- Órbita 1 -->
+                <div class="orbit orbit-1">
+                    <div class="tech-icon" data-tech="React">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="HTML5">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="Laravel">
+                        <i class="fab fa-laravel"></i>
+                    </div>
+                </div>
+
+                <!-- Órbita 2 -->
+                <div class="orbit orbit-2">
+                    <div class="tech-icon" data-tech="CSS3">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="Node.js">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="MySQL">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="C#">
+                        <span
+                            style="font-weight: 800; font-size: 1.8rem; font-family: 'Segoe UI', sans-serif;">C#</span>
+                    </div>
+                </div>
+
+                <!-- Órbita 3 -->
+                <div class="orbit orbit-3">
+                    <div class="tech-icon" data-tech="Bootstrap">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="XAMPP">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="SQL Server">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div class="tech-icon" data-tech="APIs REST">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+
+                </div>
+            </div>
+    </section><br><br><br><br>
+
+    <section class="sobre-mi" id="sobre-mi">
+        <div class="container">
+            <!-- Título de la sección -->
+            <div class="section-header">
+                <h2 class="section-title">Conóceme mejor</h2>
+                <p class="section-subtitle">Un poco más sobre mí, mis objetivos y mi perfil profesional</p>
+            </div>
+
+            <!-- Cards -->
+            <div class="cards-container">
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sobre mí</h3>
+                        <p class="card-text">
+                            Soy tecnólogo en Análisis y Desarrollo de Software, enfocado en la creación
+                            e implementación de aplicaciones web, con sólidos conocimientos técnicos y
+                            orientación a la mejora continua.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mi objetivo</h3>
+                        <p class="card-text">
+                            Mi objetivo es seguir aprendiendo nuevas tecnologías y aplicar los conocimientos
+                            que voy adquiriendo en mis experiencias como desarrollador full stack. Me apasiona
+                            crear soluciones innovadoras que resuelvan problemas cotidianos y aporten valor real.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="card-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mi perfil</h3>
+                        <p class="card-text">
+                            Me considero una persona que aprende rápido y se adapta fácilmente a los retos
+                            que se le presentan. Aunque no domine inicialmente un tema, estudio y practico
+                            hasta poder ejecutarlo correctamente. Me gusta aprender cosas nuevas y mejorar
+                            continuamente mis habilidades.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+    <section class="tecnologias-section" id="tecnologias">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="section-header">
+                <h2 class="section-title">Mis Tecnologías</h2>
+                <p class="section-subtitle">
+                    Desarrollo web con experiencia en tecnologías frontend y backend,
+                    enfocado en crear soluciones funcionales y escalables
+                </p>
+            </div>
+
+            <!-- Layout de dos columnas -->
+            <div class="skills-layout">
+                <!-- Columna Izquierda - Barras de Progreso -->
+                <div class="skills-bars">
+                    <h3><i class="fa-solid fa-code"></i> Habilidades de Programación</h3>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-html5" style="color: #e34c26;"></i>
+                            </div>
+                            <span class="skill-name">HTML5</span>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-css3-alt" style="color: #264de4;"></i>
+                            </div>
+                            <span class="skill-name">CSS3</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-js" style="color: #f0db4f;"></i>
+                            </div>
+                            <span class="skill-name">JavaScript</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-react" style="color: #61dafb;"></i>
+                            </div>
+                            <span class="skill-name">React</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-laravel" style="color: #ff2d20;"></i>
+                            </div>
+                            <span class="skill-name">Laravel</span>
+                            <span class="skill-percentage">40%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-node-js" style="color: #47a248;"></i>
+                            </div>
+                            <span class="skill-name">Node.js</span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-database" style="color: #00758f;"></i>
+                            </div>
+                            <span class="skill-name">MySQL</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-database" style="color: #cc2927;"></i>
+                            </div>
+                            <span class="skill-name">SQL Server</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <span style="color: #68217a; font-weight: 800; font-size: 1.2rem;">C#</span>
+                            </div>
+                            <span class="skill-name">C#</span>
+                            <span class="skill-percentage">40%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 40%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap" style="color: #7952b3;"></i>
+                            </div>
+                            <span class="skill-name">Bootstrap</span>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 65%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-server" style="color: #fb7a24;"></i>
+                            </div>
+                            <span class="skill-name">XAMPP</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <div class="skill-icon">
+                                <i class="fa-solid fa-plug" style="color: #3a3838;"></i>
+                            </div>
+                            <span class="skill-name">APIs REST</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 80%;"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Columna Derecha - Descripciones -->
+                <div class="skills-descriptions">
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <h4 class="skill-card-title">Desarrollo Frontend</h4>
+                        </div>
+                        <p class="skill-card-text">
+                            Experiencia en la creación de interfaces de usuario modernas y responsivas
+                            utilizando HTML5, CSS3, JavaScript y frameworks como React. Manejo de Bootstrap
+                            para diseño responsive y componentes reutilizables. Enfocado en la accesibilidad
+                            y la experiencia del usuario.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon">
+                                <i class="fa-solid fa-server"></i>
+                            </div>
+                            <h4 class="skill-card-title">Desarrollo Backend</h4>
+                        </div>
+                        <p class="skill-card-text">
+                            Conocimientos sólidos en desarrollo backend con Laravel, Node.js y C#. Creación
+                            de APIs REST, autenticación de usuarios, manejo de sesiones y arquitectura de
+                            software escalable y mantenible siguiendo las mejores prácticas del sector y
+                            patrones de diseño.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h4 class="skill-card-title">Bases de Datos</h4>
+                        </div>
+                        <p class="skill-card-text">
+                            Experiencia en diseño y gestión de bases de datos relacionales con MySQL y
+                            SQL Server. Optimización de consultas, modelado de datos, normalización,
+                            procedimientos almacenados, triggers y manejo eficiente de grandes volúmenes
+                            de información empresarial.
+                        </p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-card-header">
+                            <div class="skill-card-icon">
+                                <i class="fa-solid fa-tools"></i>
+                            </div>
+                            <h4 class="skill-card-title">Herramientas & DevOps</h4>
+                        </div>
+                        <p class="skill-card-text">
+                            Manejo de control de versiones con Git y GitHub. Configuración de entornos de
+                            desarrollo con XAMPP para proyectos PHP/MySQL. Implementación de metodologías
+                            ágiles (Scrum), testing, documentación técnica y mejores prácticas de desarrollo
+                            colaborativo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+    <section class="proyectos-section" id="proyectos">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="section-header">
+                <h2 class="section-title">Mis Proyectos</h2>
+                <p class="section-subtitle">
+                    Algunos de los proyectos en los que he trabajado, aplicando tecnologías
+                    modernas y mejores prácticas de desarrollo
+                </p>
+            </div>
+
+            <!-- Filtros de proyectos -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fa-solid fa-grip"></i> Todos
+                </button>
+            </div>
+
+            <!-- Grid de proyectos -->
+            <div class="projects-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-image">
+                        <img src="../ASSETS/images/proyecto1.png" alt="Sistema de tareas MERN Stack">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://tasks-crud-app.netlify.app/" class="project-link" target="_blank"
+                                    title="Ver Demo">
+                                    <i class="fa-solid fa-eye"></i>
+                                </a>
+                                <a href="#" class="project-link" target="_blank" title="Ver Código">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-category">Full Stack</div>
+                        <h3 class="project-title">Sistema de Gestión de Tareas (MERN Stack)</h3>
+                        <p class="project-description">
+                            Aplicación web full-stack para la gestión y organización de tareas con
+                            autenticación JWT, CRUD completo y almacenamiento en MongoDB. Interfaz
+                            responsive desarrollada con React y Tailwind CSS.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón ver más (opcional) -->
+            <div class="projects-footer">
+                <a href="#" class="btn-ver-mas">
+                    <i class="fa-brands fa-github"></i>
+                    Ver todos mis proyectos en GitHub
+                </a>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+    <section class="experiencia-section" id="experiencia">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="section-header">
+                <h2 class="section-title">Mi Experiencia</h2>
+                <p class="section-subtitle">
+                    Trayectoria profesional y proyectos en los que he participado
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fa-solid fa-calendar"></i>
+                            Abril 2025 - Octubre 2025
+                        </div>
+                        <h3 class="timeline-title">Analista y Desarrollador</h3>
+                        <h4 class="timeline-company">
+                            <i class="fa-solid fa-building"></i>
+                            CONTENTO BPS
+                        </h4>
+                        <p class="timeline-description">
+                            Durante mi experiencia en Contento BPS trabajé en el desarrollo y mantenimiento de
+                            aplicaciones internas utilizando Mantis, el framework propio de la compañía. Participé
+                            activamente en la creación de funcionalidades nuevas, corrección de errores críticos y
+                            mejoras de rendimiento en módulos existentes.
+                        </p>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fa-solid fa-list-check"></i> Responsabilidades principales:</h5>
+                            <ul>
+                                <li>Desarrollo y mantenimiento de módulos internos con el framework Mantis</li>
+                                <li>Corrección de errores funcionales y mejoras de rendimiento en aplicaciones
+                                    existentes</li>
+                                <li>Creación de APIs REST para integrar servicios internos y externos</li>
+                                <li>Documentación técnica de procesos, endpoints y funcionalidades</li>
+                                <li>Construcción de aplicaciones desde cero aplicando patrones de diseño y buenas
+                                    prácticas</li>
+                                <li>Implementación de funcionalidades usando PHP, JavaScript, HTML, CSS y bases de datos
+                                </li>
+                                <li>Colaboración con equipos internos para analizar requerimientos y proponer soluciones
+                                </li>
+                                <li>Uso de Git para versionamiento y control de cambios</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-skills">
+                            <span class="skill-badge">HTML5</span>
+                            <span class="skill-badge">CSS3</span>
+                            <span class="skill-badge">JavaScript</span>
+                            <span class="skill-badge">PHP</span>
+                            <span class="skill-badge">SQL Server</span>
+                            <span class="skill-badge">API REST</span>
+                            <span class="skill-badge">Git</span>
+                            <span class="skill-badge">Mantis Framework</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+    <section class="formacion-section" id="formacion">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="section-header">
+                <h2 class="section-title">Mi Formación</h2>
+                <p class="section-subtitle">
+                    Educación académica y certificaciones que respaldan mi desarrollo profesional
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="timeline">
+                <!-- Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker education"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fa-solid fa-calendar"></i>
+                            2022 - 2023
+                        </div>
+                        <h3 class="timeline-title">Bachiller Técnico en Programación de Software</h3>
+                        <h4 class="timeline-company">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            SENA - Servicio Nacional de Aprendizaje
+                        </h4>
+                        <p class="timeline-description">
+                            Formación técnica especializada en programación de software con énfasis en desarrollo
+                            de aplicaciones web. Adquirí conocimientos fundamentales en bases de datos, programación
+                            orientada a objetos, diseño de interfaces y metodologías ágiles de desarrollo.
+                        </p>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fa-solid fa-book"></i> Competencias desarrolladas:</h5>
+                            <ul>
+                                <li>Fundamentos de programación y lógica con PSeInt</li>
+                                <li>Desarrollo web con HTML5, CSS3 y JavaScript</li>
+                                <li>Framework Laravel para backend y APIs REST</li>
+                                <li>Gestión de bases de datos MySQL con XAMPP</li>
+                                <li>Aplicación de metodologías ágiles en proyectos</li>
+                                <li>Trabajo colaborativo y control de versiones</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-skills">
+                            <span class="skill-badge cert">HTML5</span>
+                            <span class="skill-badge cert">CSS3</span>
+                            <span class="skill-badge cert">JavaScript</span>
+                            <span class="skill-badge cert">Laravel</span>
+                            <span class="skill-badge cert">MySQL</span>
+                            <span class="skill-badge cert">XAMPP</span>
+                            <span class="skill-badge cert">PSeInt</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker education"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">
+                            <i class="fa-solid fa-calendar"></i>
+                            2024 - 2025
+                        </div>
+                        <h3 class="timeline-title">Tecnólogo en Análisis y Desarrollo de Software</h3>
+                        <h4 class="timeline-company">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            SENA - Servicio Nacional de Aprendizaje
+                        </h4>
+                        <p class="timeline-description">
+                            Formación tecnológica avanzada en análisis, diseño e implementación de soluciones de
+                            software. Profundización en arquitecturas de software, patrones de diseño, desarrollo
+                            full stack y gestión de proyectos tecnológicos siguiendo estándares de calidad
+                            internacional.
+                        </p>
+                        <div class="timeline-responsibilities">
+                            <h5><i class="fa-solid fa-book"></i> Competencias desarrolladas:</h5>
+                            <ul>
+                                <li>Análisis y diseño de sistemas de información</li>
+                                <li>Desarrollo full stack con tecnologías modernas</li>
+                                <li>Programación orientada a objetos con Java y Python</li>
+                                <li>Frameworks frontend (React) y backend (Node.js)</li>
+                                <li>Gestión de bases de datos SQL y normalización</li>
+                                <li>Metodologías ágiles (Scrum) y gestión de proyectos</li>
+                                <li>Testing, debugging y control de calidad</li>
+                                <li>Documentación técnica y levantamiento de requerimientos</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-achievement">
+                            <i class="fa-solid fa-trophy"></i>
+                            <span>Proyecto de grado en desarrollo con enfoque en soluciones empresariales</span>
+                        </div>
+                        <div class="timeline-skills">
+                            <span class="skill-badge cert">Java</span>
+                            <span class="skill-badge cert">Python</span>
+                            <span class="skill-badge cert">JavaScript</span>
+                            <span class="skill-badge cert">React</span>
+                            <span class="skill-badge cert">Node.js</span>
+                            <span class="skill-badge cert">HTML5</span>
+                            <span class="skill-badge cert">CSS3</span>
+                            <span class="skill-badge cert">SQL</span>
+                            <span class="skill-badge cert">Scrum</span>
+                            <span class="skill-badge cert">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br><br><br>
+
+    <section class="contacto-section" id="contacto">
+        <div class="container">
+            <!-- Encabezado -->
+            <div class="section-header">
+                <h2 class="section-title">Contáctame</h2>
+                <p class="section-subtitle">
+                    ¿Tienes un proyecto en mente? ¡Hablemos! Estoy disponible para nuevas oportunidades
+                </p>
+            </div>
+
+            <div class="contact-wrapper">
+                <!-- Columna Izquierda - Información de Contacto -->
+                <div class="contact-info">
+                    <div class="info-card-contact">
+                        <div class="info-icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Email</h3>
+                            <p>sebascorreamorales@gmail.com</p>
+                            <a href="mailto:sebascorreamorales@gmail.com" class="contact-link email-link">
+                                Enviar correo
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card-contact">
+                        <div class="info-icon whatsapp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>WhatsApp</h3>
+                            <p>+57 310 430 06 85</p>
+                            <a href="https://wa.me/573104300685?text=Hola%20Darley,%20me%20interesa%20hablar%20contigo%20sobre%20un%20proyecto%20o%20oferta%20laboral"
+                                target="_blank" class="contact-link whatsapp-link">
+                                Enviar mensaje
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-card-contact">
+                        <div class="info-icon location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Ubicación</h3>
+                            <p>Medellín, Antioquia</p>
+                            <p class="location-subtitle">Colombia</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card-contact">
+                        <div class="info-icon social">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <div class="info-content">
+                            <h3>Redes Sociales</h3>
+                            <div class="social-links-contact">
+                                <a href="https://github.com/sebascorream" target="_blank" title="GitHub">
+                                    <i class="fa-brands fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/darley-sebasti%C3%A1n-correa-morales/"
+                                    target="_blank" title="LinkedIn">
+                                    <i class="fa-brands fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/_d__sebas_/" target="_blank" title="Instagram">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha - Formulario de Contacto -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fa-solid fa-user"></i>
+                                Nombre completo
+                            </label>
+                            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fa-solid fa-envelope"></i>
+                                Correo electrónico
+                            </label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">
+                                <i class="fa-solid fa-phone"></i>
+                                Teléfono (opcional)
+                            </label>
+                            <input type="tel" id="phone" name="phone" placeholder="+57 300 123 4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">
+                                <i class="fa-solid fa-tag"></i>
+                                Asunto
+                            </label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="trabajo">Oportunidad laboral</option>
+                                <option value="proyecto">Proyecto freelance</option>
+                                <option value="colaboracion">Colaboración</option>
+                                <option value="consulta">Consulta general</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fa-solid fa-message"></i>
+                                Mensaje
+                            </label>
+                            <textarea id="message" name="message" rows="5"
+                                placeholder="Cuéntame sobre tu proyecto o consulta..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Enviar mensaje
+                        </button>
+                    </form>
+
+                    <div class="form-message" id="formMessage" style="display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="../JS/app.js"></script>
+    <script src="../JS/tecnologias.js"></script>
+    <script src="../JS/proyectos.js"></script>
+    <script src="../JS/contacto.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,325 @@
+/* ===================================
+   SECCIÓN SOBRE MÍ
+   =================================== */
+.sobre-mi {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #f0f9f6 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo decorativo */
+.sobre-mi::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.sobre-mi::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -5%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.sobre-mi .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===================================
+   ENCABEZADO DE LA SECCIÓN
+   =================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981 0%, #047857 100%);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+/* ===================================
+   CONTENEDOR DE CARDS
+   =================================== */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 40px;
+}
+
+/* ===================================
+   CARD INDIVIDUAL
+   =================================== */
+.info-card {
+    background: white;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.info-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.info-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.info-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* Efecto de brillo en hover */
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(16, 185, 129, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.info-card:hover::before {
+    left: 100%;
+}
+
+/* Hover effect */
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+    border-color: #10b981;
+}
+
+/* ===================================
+   ICONO DE LA CARD
+   =================================== */
+.card-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover .card-icon {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: white;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+/* ===================================
+   CONTENIDO DE LA CARD
+   =================================== */
+.card-content {
+    position: relative;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.info-card:hover .card-title {
+    color: #10b981;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-mi {
+        padding: 60px 0;
+    }
+
+    .section-header {
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .info-card {
+        padding: 1.5rem;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+
+    .card-title {
+        font-size: 1.3rem;
+    }
+
+    .card-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .info-card {
+        padding: 1.25rem;
+    }
+
+    .card-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .card-icon i {
+        font-size: 1.3rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===================================
+   VARIANTE ALTERNATIVA - CARDS HORIZONTALES
+   (Solo para desktop > 1200px)
+   =================================== */
+@media (min-width: 1200px) {
+    .cards-container.horizontal {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card.horizontal {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        padding: 2.5rem;
+    }
+
+    .info-card.horizontal .card-icon {
+        margin-bottom: 0;
+        flex-shrink: 0;
+    }
+
+    .info-card.horizontal .card-content {
+        flex: 1;
+    }
+}

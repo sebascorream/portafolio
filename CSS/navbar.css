@@ -1,0 +1,238 @@
+/* ===================================
+   NAVBAR - TEMÁTICA VERDE ESMERALDA
+   Estilos generales del menú de navegación
+   =================================== */
+
+/* Reset básico para evitar inconsistencias entre navegadores */
+* {
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina rellenos por defecto */
+  box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+/* Contenedor principal del navbar */
+.custom-navbar {
+  background: rgba(255, 255, 255, 0.95); /* Fondo blanco semitransparente */
+  backdrop-filter: blur(10px); /* Efecto glassmorphism (desenfoque del fondo) */
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.1); /* Sombra suave verde */
+  border-radius: 1rem; /* Bordes redondeados */
+  margin: 1rem auto; /* Separación vertical y centrado horizontal */
+  width: 90%; /* Ancho relativo */
+  max-width: 1200px; /* Límite máximo de ancho */
+  padding: 0.5rem 1rem; /* Espaciado interno */
+  transition: all 0.3s ease; /* Transiciones suaves */
+  position: sticky; /* Se mantiene visible al hacer scroll */
+  top: 1rem; /* Separación del borde superior */
+  z-index: 1000; /* Prioridad sobre otros elementos */
+}
+
+/* Efecto visual cuando el usuario hace scroll */
+.custom-navbar.scrolled {
+  box-shadow: 0 6px 30px rgba(16, 185, 129, 0.2); /* Sombra más intensa */
+}
+
+/* Logo o nombre de la marca */
+.navbar-brand {
+  font-size: 1.5rem; /* Tamaño del texto */
+  font-weight: 700; /* Negrita */
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%); /* Degradado verde */
+  -webkit-background-clip: text; /* Aplica el fondo al texto */
+  -webkit-text-fill-color: transparent; /* Hace visible el degradado */
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Efecto hover en el logo */
+.navbar-brand:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Contenedor de los ítems del navbar */
+.navbar-collapse {
+  justify-content: center; /* Centra los links horizontalmente */
+}
+
+/* Item individual del menú */
+.nav-item {
+  margin: 0 0.5rem; /* Separación entre ítems */
+}
+
+/* Enlaces del menú */
+.nav-link {
+  color: #374151 !important; /* Gris oscuro (forzado sobre Bootstrap) */
+  font-weight: 500; /* Peso medio */
+  font-size: 1rem; /* Tamaño estándar */
+  padding: 0.5rem 1rem !important; /* Área clickeable */
+  border-radius: 0.5rem; /* Bordes suaves */
+  transition: all 0.3s ease; /* Transiciones */
+  display: flex; /* Permite alinear icono y texto */
+  align-items: center; /* Centrado vertical */
+  position: relative; /* Base para pseudoelementos */
+}
+
+/* Iconos dentro de los links */
+.nav-link i {
+  font-size: 1rem; /* Tamaño del icono */
+  transition: transform 0.3s ease; /* Animación del icono */
+}
+
+/* Hover de los links */
+.nav-link:hover {
+  color: #10b981 !important; /* Verde esmeralda */
+  background: rgba(16, 185, 129, 0.1); /* Fondo suave */
+  transform: translateY(-2px); /* Efecto flotante */
+}
+
+/* Hover específico del icono */
+.nav-link:hover i {
+  transform: scale(1.2); /* Aumenta el icono */
+}
+
+/* Estado activo del link */
+.nav-link.active {
+  color: #10b981 !important; /* Marca el link activo */
+  font-weight: 600; /* Mayor peso visual */
+}
+
+/* ===================================
+   BOTÓN HAMBURGUESA (MÓVIL)
+   =================================== */
+
+/* Botón toggle del navbar */
+.navbar-toggler {
+  border: 2px solid #10b981; /* Borde verde */
+  padding: 0.5rem; /* Área clickeable */
+  transition: all 0.3s ease; /* Animaciones suaves */
+}
+
+/* Estado focus (accesibilidad) */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(16, 185, 129, 0.25); /* Anillo verde */
+}
+
+/* Icono hamburguesa personalizado */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(16, 185, 129, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Hover del botón hamburguesa */
+.navbar-toggler:hover {
+  background: rgba(16, 185, 129, 0.1); /* Fondo sutil */
+  transform: scale(1.05); /* Ligero zoom */
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 991px) {
+  .custom-navbar {
+    width: 95%; /* Más ancho relativo */
+    padding: 1rem; /* Más espacio interno */
+  }
+
+  .navbar-collapse {
+    margin-top: 1rem; /* Separación del navbar */
+    padding: 1rem; /* Espaciado interno */
+    background: rgba(240, 249, 246, 0.95); /* Fondo verde claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+  }
+
+  .nav-item {
+    margin: 0.5rem 0; /* Separación vertical */
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem !important; /* Links más grandes */
+    border-radius: 0.5rem;
+  }
+
+  /* Desactiva indicadores extra en móvil */
+  .nav-link.active::after {
+    display: none;
+  }
+
+  /* Fondo para link activo en móvil */
+  .nav-link.active {
+    background: rgba(16, 185, 129, 0.15);
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 768px) {
+  .custom-navbar {
+    width: 95%;
+    margin: 0.5rem auto; /* Menor margen */
+  }
+
+  .navbar-brand {
+    font-size: 1.3rem; /* Logo más pequeño */
+  }
+
+  .nav-link {
+    font-size: 0.95rem; /* Texto reducido */
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .custom-navbar {
+    width: 98%; /* Aprovecha más ancho */
+    padding: 0.75rem; /* Ajuste interno */
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem; /* Logo compacto */
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem !important;
+  }
+
+  .nav-link i {
+    font-size: 0.9rem; /* Iconos más pequeños */
+  }
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+
+/* Animación de despliegue del menú */
+@keyframes slideDown {
+  from {
+    opacity: 0; /* Invisible */
+    transform: translateY(-20px); /* Desplazado hacia arriba */
+  }
+  to {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Posición final */
+  }
+}
+
+/* Aplica animación al abrir el menú */
+.navbar-collapse.show {
+  animation: slideDown 0.3s ease-out;
+}
+
+/* ===================================
+   INDICADOR DE SCROLL
+   =================================== */
+
+/* Barra decorativa inferior */
+.custom-navbar::after {
+  content: '';
+  position: absolute;
+  bottom: 0; /* Pegada abajo */
+  left: 0;
+  width: 0%; /* Invisible inicialmente */
+  height: 3px; /* Grosor */
+  background: linear-gradient(90deg, #10b981 0%, #047857 100%); /* Degradado */
+  transition: width 0.3s ease; /* Animación de expansión */
+}
+
+/* Se muestra completamente al hacer scroll */
+.custom-navbar.scrolled::after {
+  width: 100%;
+}

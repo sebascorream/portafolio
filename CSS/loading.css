@@ -1,0 +1,334 @@
+/* ===================================
+   ESTILOS GLOBALES
+   Afectan a toda la aplicación
+   =================================== */
+
+/* Selector universal:
+   elimina márgenes y paddings por defecto del navegador
+   y hace que el ancho/alto incluyan padding y border */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base del documento */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Fuente legible y moderna */
+  overflow-x: hidden; /* Evita scroll horizontal por animaciones */
+}
+
+/* ===================================
+   PANTALLA DE CARGA
+   =================================== */
+
+/* Contenedor que cubre toda la pantalla */
+#loading-screen {
+  position: fixed; /* Fijo respecto a la ventana */
+  top: 0;
+  left: 0;
+  width: 100%; /* Ancho completo */
+  height: 100vh; /* Alto completo del viewport */
+
+  /* Fondo con degradado */
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f0f9f6 50%,
+    #d1fae5 100%
+  );
+
+  /* Flexbox para centrar elementos */
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  justify-content: center; /* Centrado vertical */
+  align-items: center; /* Centrado horizontal */
+
+  z-index: 9999; /* Siempre encima del resto del contenido */
+
+  /* Animación suave al ocultar el loader */
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+/* Estado cuando el loading se oculta */
+#loading-screen.hidden {
+  opacity: 0; /* Se vuelve invisible */
+  visibility: hidden; /* Se elimina visualmente */
+  pointer-events: none; /* No se puede interactuar */
+}
+
+/* ===================================
+   TEXTO DE BIENVENIDA
+   =================================== */
+
+.welcome-text {
+  /* Degradado aplicado al texto */
+  background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+  -webkit-background-clip: text; /* El fondo se recorta al texto */
+  -webkit-text-fill-color: transparent; /* El texto toma el degradado */
+
+  font-size: 2.5rem; /* Tamaño grande */
+  font-weight: bold;
+  margin-bottom: 30px; /* Espacio inferior */
+
+  animation: fadeInUp 1s ease; /* Animación de entrada */
+  text-align: center;
+  padding: 0 1rem; /* Espaciado lateral en pantallas pequeñas */
+}
+
+/* ===================================
+   LOADER ANIMADO
+   =================================== */
+
+.loader {
+  width: 60px;
+  height: 60px;
+
+  /* Borde base semitransparente */
+  border: 6px solid rgba(16, 185, 129, 0.2);
+
+  /* Bordes destacados para efecto de giro */
+  border-top: 6px solid #10b981;
+  border-right: 6px solid #047857;
+
+  border-radius: 50%; /* Hace el círculo */
+
+  animation: spin 1s linear infinite; /* Giro continuo */
+
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3); /* Brillo */
+  position: relative; /* Necesario para ::before y ::after */
+}
+
+/* Loader interno: segundo círculo girando al revés */
+.loader::before {
+  content: ''; /* Elemento generado */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  /* Centrado exacto */
+  transform: translate(-50%, -50%);
+
+  width: 40px;
+  height: 40px;
+
+  border: 4px solid transparent; /* Bordes invisibles */
+  border-top: 4px solid #34d399; /* Parte visible */
+
+  border-radius: 50%;
+
+  animation: spin-reverse 0.8s linear infinite; /* Giro inverso */
+}
+
+/* Aro externo punteado con efecto pulso */
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 80px;
+  height: 80px;
+
+  border: 2px dotted rgba(16, 185, 129, 0.3); /* Borde punteado */
+  border-radius: 50%;
+
+  animation: pulse-ring 2s ease-in-out infinite; /* Pulso */
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+
+/* Animación de giro normal */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); /* Inicio */
+  }
+  100% {
+    transform: rotate(360deg); /* Giro completo */
+  }
+}
+
+/* Animación de giro inverso */
+@keyframes spin-reverse {
+  0% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/* Animación de entrada desde abajo */
+@keyframes fadeInUp {
+  from {
+    opacity: 0; /* Invisible */
+    transform: translateY(30px); /* Desplazado hacia abajo */
+  }
+  to {
+    opacity: 1; /* Visible */
+    transform: translateY(0); /* Posición normal */
+  }
+}
+
+/* Animación de pulso del aro exterior */
+@keyframes pulse-ring {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.1;
+  }
+}
+
+/* ===================================
+   PORCENTAJE DE CARGA
+   =================================== */
+
+.loading-percentage {
+  color: #047857; /* Verde oscuro */
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 30px;
+
+  /* Aparece con retraso */
+  animation: fadeInUp 1s ease 0.3s backwards;
+}
+
+/* ===================================
+   CONTENIDO PRINCIPAL
+   =================================== */
+
+/* Contenido oculto mientras carga */
+#main-content {
+  opacity: 0;
+  transition: opacity 1s ease; /* Aparición suave */
+}
+
+/* Estado visible */
+#main-content.visible {
+  opacity: 1;
+}
+
+/* ===================================
+   PARTÍCULAS DECORATIVAS
+   =================================== */
+
+.loading-particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+
+  background: #10b981;
+  border-radius: 50%; /* Forma circular */
+
+  opacity: 0.4;
+
+  animation: float-particle 4s ease-in-out infinite;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+/* Partícula 1 */
+.loading-particle:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+  animation-duration: 3s;
+}
+
+/* Partícula 2 */
+.loading-particle:nth-child(2) {
+  top: 70%;
+  left: 10%;
+  animation-delay: 1s;
+  animation-duration: 4s;
+}
+
+/* Partícula 3 */
+.loading-particle:nth-child(3) {
+  top: 30%;
+  right: 20%;
+  animation-delay: 0.5s;
+  animation-duration: 3.5s;
+}
+
+/* Partícula 4 */
+.loading-particle:nth-child(4) {
+  top: 80%;
+  right: 15%;
+  animation-delay: 1.5s;
+  animation-duration: 4.5s;
+}
+
+/* Movimiento flotante */
+@keyframes float-particle {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(-50px) translateX(30px);
+    opacity: 0.8;
+  }
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .welcome-text {
+    font-size: 2rem;
+  }
+
+  .loader {
+    width: 50px;
+    height: 50px;
+    border-width: 5px;
+  }
+
+  .loader::before {
+    width: 35px;
+    height: 35px;
+    border-width: 3px;
+  }
+
+  .loader::after {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .welcome-text {
+    font-size: 1.5rem;
+  }
+
+  .loader {
+    width: 40px;
+    height: 40px;
+    border-width: 4px;
+  }
+
+  .loader::before {
+    width: 28px;
+    height: 28px;
+    border-width: 3px;
+  }
+
+  .loader::after {
+    width: 60px;
+    height: 60px;
+  }
+
+  .loading-percentage {
+    font-size: 1rem;
+  }
+}

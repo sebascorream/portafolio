@@ -1,0 +1,484 @@
+/* ===================================
+   SECCIONES EXPERIENCIA Y FORMACIÓN
+   =================================== */
+.experiencia-section,
+.formacion-section {
+    padding: 80px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f9f6 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.formacion-section {
+    background: linear-gradient(180deg, #f0f9f6 0%, #ffffff 100%);
+}
+
+/* Efectos decorativos */
+.experiencia-section::before,
+.formacion-section::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: -5%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* ===================================
+   ENCABEZADO
+   =================================== */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #10b981 0%, #047857 100%);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #6b7280;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+/* ===================================
+   TIMELINE / LÍNEA DE TIEMPO
+   =================================== */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Línea vertical central */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(180deg, #10b981 0%, #047857 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
+}
+
+/* ===================================
+   ITEM DE TIMELINE
+   =================================== */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.timeline-item:nth-child(odd) {
+    padding-right: 50%;
+    padding-left: 0;
+}
+
+.timeline-item:nth-child(even) {
+    padding-left: 50%;
+    padding-right: 0;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+.timeline-item:nth-child(4) { animation-delay: 0.4s; }
+.timeline-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* ===================================
+   MARCADOR (PUNTO EN LA LÍNEA)
+   =================================== */
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #10b981;
+    border-radius: 50%;
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0.1),
+                0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-marker {
+    transform: translateX(-50%) scale(1.3);
+    background: #10b981;
+    box-shadow: 0 0 0 10px rgba(16, 185, 129, 0.2),
+                0 6px 12px rgba(16, 185, 129, 0.3);
+}
+
+/* Marcador para educación (opcional) */
+.timeline-marker.education {
+    border-color: #047857;
+}
+
+.timeline-item:hover .timeline-marker.education {
+    background: #047857;
+}
+
+/* ===================================
+   CONTENIDO DE TIMELINE
+   =================================== */
+.timeline-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* Flecha que apunta a la línea */
+.timeline-item:nth-child(odd) .timeline-content::before {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 20px;
+    width: 0;
+    height: 0;
+    border-right: 12px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(16, 185, 129, 0.15);
+    border-color: #10b981;
+}
+
+/* ===================================
+   ELEMENTOS DEL CONTENIDO
+   =================================== */
+.timeline-date {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6px 14px;
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.timeline-date i {
+    font-size: 0.85rem;
+}
+
+.timeline-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s ease;
+}
+
+.timeline-content:hover .timeline-title {
+    color: #10b981;
+}
+
+.timeline-company {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-company i {
+    color: #10b981;
+    font-size: 1rem;
+}
+
+.timeline-description {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* ===================================
+   LISTA DE RESPONSABILIDADES
+   =================================== */
+.timeline-responsibilities {
+    margin-bottom: 1.5rem;
+}
+
+.timeline-responsibilities h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.timeline-responsibilities h5 i {
+    color: #10b981;
+    font-size: 0.9rem;
+}
+
+.timeline-responsibilities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-responsibilities li {
+    font-size: 0.9rem;
+    color: #6b7280;
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.timeline-responsibilities li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #10b981;
+    font-weight: bold;
+}
+
+.timeline-responsibilities li:hover {
+    color: #374151;
+}
+
+.timeline-responsibilities li:hover::before {
+    transform: translateX(3px);
+    transition: transform 0.2s ease;
+}
+
+/* ===================================
+   LOGROS/ACHIEVEMENTS
+   =================================== */
+.timeline-achievement {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(4, 120, 87, 0.05) 100%);
+    border-left: 4px solid #10b981;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-achievement:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+.timeline-achievement i {
+    color: #10b981;
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+.timeline-achievement span {
+    font-size: 0.9rem;
+    color: #047857;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* ===================================
+   SKILLS/TECNOLOGÍAS
+   =================================== */
+.timeline-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-badge {
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
+}
+
+/* Badges para certificaciones */
+.skill-badge.cert {
+    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+@media (max-width: 768px) {
+    .experiencia-section,
+    .formacion-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+    }
+
+    /* Timeline centrado en móvil */
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        padding-left: 70px !important;
+        padding-right: 0 !important;
+    }
+
+    .timeline-marker {
+        left: 30px;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item:hover .timeline-marker {
+        transform: translateX(-50%) scale(1.2);
+    }
+
+    /* Flecha siempre a la izquierda en móvil */
+    .timeline-item:nth-child(odd) .timeline-content::before,
+    .timeline-item:nth-child(even) .timeline-content::before {
+        left: -12px;
+        right: auto;
+        border-right: 12px solid white;
+        border-left: none;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+    }
+
+    .timeline-content {
+        padding: 1.5rem;
+    }
+
+    .timeline-title {
+        font-size: 1.3rem;
+    }
+
+    .timeline-company {
+        font-size: 1rem;
+    }
+
+    .timeline-description {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+    }
+
+    .timeline-content {
+        padding: 1.25rem;
+    }
+
+    .timeline-title {
+        font-size: 1.2rem;
+    }
+
+    .timeline-date {
+        font-size: 0.85rem;
+        padding: 5px 12px;
+    }
+
+    .skill-badge {
+        font-size: 0.8rem;
+        padding: 5px 10px;
+    }
+}
